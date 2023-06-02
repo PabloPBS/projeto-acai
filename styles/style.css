@@ -8,21 +8,37 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-repeat: no-repeat;
     height: 100vh;
 }
 
+#fixo {
+    height: 9%;
+}
+
 header {
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.377);
     background-image: linear-gradient(45deg, #3D2859, #4D4359);
+    width: 100%;
+    z-index: 99;
+    position: fixed;
+    border-bottom: 1px solid greenyellow;
+}
+
+.anchor {
+    scroll-margin: 65px;
 }
 
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 12vh;
+    height: 12%;
 }
 
 nav > img#logo {
@@ -79,7 +95,6 @@ button#fechar-menu:hover {
 
 main {
     background-image: linear-gradient(45deg, #3D2859, #4D4359);
-    border-top: 1px solid greenyellow;
     border-bottom: 2px solid #a96cfa;
     padding: 5px;
     display: flex;
@@ -226,6 +241,11 @@ section#contatos > #form-contato {
     color: black;
     cursor: pointer;
     font-weight: 700;
+}
+
+#grid > #submit:hover {
+    background-color: #90ec06;
+    transition: background-color .2s ease;
 }
 
 span.required {
