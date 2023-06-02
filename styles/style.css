@@ -1,9 +1,11 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Sriracha&display=swap');
+
 
 * {
     margin: 0px;
     padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Outfit', sans-serif;
     box-sizing: border-box;
 }
 
@@ -45,9 +47,10 @@ ul#menu > li > a.item-menu {
 }
 
 ul#menu > li > a.item-menu:hover {
-    background-color: #BE96F2;
+    background-color: #be96f25d;
     border-radius: 7px;
-    color: black;
+    color: greenyellow;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
 
 button#abrir-menu {
@@ -77,22 +80,49 @@ button#fechar-menu:hover {
 
 main {
     background-image: linear-gradient(45deg, #3D2859, #4D4359);
-    margin: 5px;
+    border-top: 1px solid greenyellow;
+    border-bottom: 2px solid #a96cfa;
     padding: 5px;
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 section#img {
     width: fit-content;
     border-radius: 5px;
-    margin: auto;
 }
 
 section#img > img{
-    max-width: 280px;
+    max-width: 400px;
     border-radius: 10px;
-    background-color: #BE96F2;
-    margin: 5px;
+    margin: 10px;
+}
+
+section#text {
+    color: #adff2f;
+    max-width: 400px;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 1px black;
+}
+
+section#sobre {
+    padding: 10px;
+    background-color: #adff2f;
+    background-color: #adff2f;
+    border-end-end-radius: 15%;
+}
+
+section#sobre > h1 {
+    font-size: 2em;
+    color: darkorchid;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section#sobre > p.text-sobre {
+    text-align: center;
+    padding: 10px;
 }
 
 @media screen and (max-width: 730px) {
@@ -116,7 +146,6 @@ section#img > img{
 
     ul#menu > li > a.item-menu:hover {
         background: none;
-        color: #a96cfa;
     }
 
     button#abrir-menu {
