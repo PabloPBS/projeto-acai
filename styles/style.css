@@ -123,7 +123,7 @@ section.sobre > p {
     margin: auto;
 }
 
-.sobre svg {
+svg {
     display: block;
 }
 
@@ -166,6 +166,11 @@ section#card-itens> div.item > p#title {
 
 section#card-itens> div.item > p#desc {
     text-align: center;
+}
+
+section#contatos {
+    background-color: #3D2859;
+    color: white;
 }
 
 @media screen and (max-width: 730px) {
