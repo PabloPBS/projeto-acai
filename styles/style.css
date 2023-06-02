@@ -41,7 +41,7 @@ ul#menu > li > a.item-menu {
     text-decoration: none;
     padding: 0.8rem;
     color: rgb(255, 255, 255);
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.2em;
 }
 
@@ -98,6 +98,7 @@ section#text {
     font-size: 1.5em;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.521);
     padding: 20px;
+    font-weight: 700;
 }
 
 section.sobre {
@@ -107,7 +108,7 @@ section.sobre {
 section.sobre > h1 {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.418);
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 700;
     color: darkorchid;
     text-align: center;
     margin-bottom: 20px;
@@ -139,6 +140,8 @@ section#card-itens {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+    justify-items: center;
+    margin: 5px;
 }
 
 section#card-itens > .item {
@@ -149,7 +152,12 @@ section#card-itens > .item {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 5px;
+    transition: transform .3s;
+}
+
+section#card-itens > .item:hover {
+    transition: transform .3s ease-in;
+    transform: translate(0, -5px);
 }
 
 section#card-itens > .item > img {
@@ -160,7 +168,7 @@ section#card-itens > .item > img {
 }
 
 section#card-itens> div.item > p#title {
-    font-weight: bold;
+    font-weight: 700;
     margin: 5px 0px;
 }
 
@@ -171,6 +179,58 @@ section#card-itens> div.item > p#desc {
 section#contatos {
     background-color: #3D2859;
     color: white;
+    border-bottom: 2px solid #a96cfa;
+}
+
+section#contatos > h1 {
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+section#contatos > #form-contato {
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1000px;
+    border-radius: 5px;
+}
+
+#grid > p {
+    margin: 5px;
+}
+
+#grid > p > input {
+    border-radius: 3px;
+    margin: 4px;
+    padding: 5px;
+    border: none;
+}
+
+#form-contato > p > #msg {
+    margin-top: 5px;
+    border-radius: 7px;
+    padding: 3px;
+}
+
+#grid > #submit {
+    border: 1px solid black;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #adff2f;
+    color: black;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+span.required {
+    color: red;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 730px) {
@@ -206,7 +266,8 @@ section#contatos {
     }
 
     main {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
     section#img > img {
@@ -235,6 +296,6 @@ section#contatos {
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 200px;
+        max-width: 300px;
     }
 }
