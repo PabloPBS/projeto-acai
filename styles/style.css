@@ -298,4 +298,8 @@ span.required {
         align-items: center;
         max-width: 300px;
     }
+
+    #form-contato {
+        flex-direction: column;
+    }
 }
