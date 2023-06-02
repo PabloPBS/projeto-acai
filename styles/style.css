@@ -233,6 +233,25 @@ span.required {
     font-weight: 700;
 }
 
+footer {
+    background-color: #adff2f;
+    padding: 10px;
+}
+
+footer > p {
+    text-align: center;
+}
+
+footer > p > #dev {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+footer > p > #dev:hover {
+    border-bottom: 2px solid #a96cfa;
+}
+
 @media screen and (max-width: 730px) {
     #menu {
         display: none;
