@@ -88,21 +88,17 @@ main {
     justify-content: space-evenly;
 }
 
-section#img {
-    width: fit-content;
-    border-radius: 5px;
-}
-
 section#img > img{
     max-width: 400px;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 section#text {
     color: #adff2f;
     max-width: 400px;
     font-size: 1.5em;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.521);
+    padding: 20px;
 }
 
 section.sobre {
@@ -110,6 +106,7 @@ section.sobre {
 }
 
 section.sobre > h1 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.418);
     font-size: 2em;
     color: darkorchid;
     text-align: center;
@@ -118,13 +115,38 @@ section.sobre > h1 {
 }
 
 section.sobre > p {
-    text-align: center;
-    margin: 2rem 10rem;
+    text-align: justify;
+    word-break: break-all;
+    max-width: 800px;
+    padding: 10px;
     font-size: 1.3rem;
+    margin: auto;
 }
 
 .sobre svg {
     display: block;
+}
+
+section#cardapio > h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #a96cfa;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    margin-bottom: 50px;
+}
+
+section#card-itens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+section#card-itens > .item {
+    background-color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 730px) {
@@ -163,21 +185,32 @@ section.sobre > p {
         display: block;
     }
 
-    section#img {
-        margin: auto;
-    }
-
     section#img > img {
-        width: 300px;
-        margin: 10px;
+        width: 100%;
     }
 
     section#text {
         margin: 10px;
         text-align: center;
+        margin: auto;
     }
 
     section.sobre > p {
         margin: 2rem;
+    }
+
+    section#card-itens {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+    
+    section#card-itens > .item {
+        background-color: #f1f1f1;
+        padding: 15px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
